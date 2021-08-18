@@ -16,6 +16,25 @@ body{
   padding:0;
 }
 
+button{
+  margin:0;
+  padding:5px 12px;
+  font-weight:bold;
+  text-transform:uppercase;
+  font-family:sans-serif;
+  color:#c0c3c6;
+  border: solid black 2px;
+  font-size:15px;
+}
+
+#button1{
+  background:rgba(7,91,164,1);
+}
+
+#button2{
+  background:rgba(91,2,18,1);
+}
+
 h2{font-size:40px;
 text-transform:uppercase;
 margin:20px 0 5px 0;}

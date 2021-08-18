@@ -12,13 +12,15 @@
   <h1 id="title">Bodyweight Exercise 1RM Calculator</h1>
   <div id="info">
   <form id="new">
-    <label for="first">Enter bodyweight:</label>
-    <input type="text" id="first" name="first"><br>
-    <label for="second">Enter added weight:</label>
+    <label for="first">Enter bodyweight(lb/kg):</label>
+    <input type="text" id="first" name="first" value="0"><br>
+    <label for="second">Enter added weight(lb/kg):</label>
     <input type="text" id="second" name="second"><br>
-    <label for="third">Enter reps:</label>
+    <label for="third">Enter rep amount (1-20):</label>
     <input type="text" id="third" name="third" value='1'><br>
-  <button type="submit" id='button1'>Calculate!</button>
+  <button type="button" id='button1'>Calculate!</button><br>
+  <button id="button2" onclick="window.location.reload()" >Reset!</button>
+</form>
   </div>
   <h2 style="text-align:center">1RM Calculations</h2>
   <table class="styled-table">
@@ -137,7 +139,7 @@
 <p style="text-align:center">*Percentage is from the website:https://strengthlevel.com/one-rep-max-calculator</p>
 
 </div>
-<script src="script.js">
+<script src="script1.js">
 
 </script>
 </body>

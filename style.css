@@ -25,6 +25,12 @@ button{
   color:#c0c3c6;
   border: solid black 2px;
   font-size:15px;
+  cursor:pointer;
+}
+
+#button1:hover, #button2:hover{
+  background:grey;
+  color:black;
 }
 
 #button1{

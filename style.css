@@ -1,3 +1,5 @@
+
+
 .main{
   background:white;
   margin:auto;
@@ -27,6 +29,7 @@ button{
   font-size:15px;
   cursor:pointer;
 }
+
 
 #button1:hover, #button2:hover{
   background:grey;
@@ -81,7 +84,29 @@ margin:20px 0 5px 0;}
 input{
   background:#c0c3c6;
   border:solid black 1px;
+  text-align:right;
+  width:110px;
 }
 
 other{color:green;
 font-size:100px;}
+
+@media (width<800px){
+
+  input{
+    font-size:1.25em;
+  }
+
+  #button1, #button2{
+    width:200px;
+    height:50px;
+    margin:10px;
+  }
+
+  table{
+    font-size:1.5em;
+  }
+
+
+
+}

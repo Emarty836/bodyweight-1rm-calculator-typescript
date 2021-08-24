@@ -194,8 +194,10 @@ function calculate() {
   }
 
   /*------------------------------------------------------------------------quote-----------------------------------------------------*/
-
-  resulttext.insertAdjacentText('afterend', 'Your 1RM is ' + repmax + 'lbs or ' + addedweight + 'lbs added weight which is ' + ratio + '% of bodyweight.');
+if (bodyweight === 0)
+{resulttext.insertAdjacentText('afterend', 'Your 1RM for the non-bodyweight exercise is ' + repmax);}
+else{
+  resulttext.insertAdjacentText('afterend', 'Your 1RM is ' + repmax + 'lbs or ' + addedweight + 'lbs added weight which is ' + ratio + '% of your bodyweight.');}
   button1.removeEventListener('click', calculate);
 }
 

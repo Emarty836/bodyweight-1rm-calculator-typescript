@@ -88,10 +88,17 @@ input{
   width:110px;
 }
 
+.stuff{
+  font-style:italic;
+  font-size:15px;
+}
+
+
+
 other{color:green;
 font-size:100px;}
 
-@media screen and (width<1200px){
+@media screen and (width<600px){
 
   input{
     font-size:1.25em;
@@ -105,6 +112,15 @@ font-size:100px;}
 
   table{
     font-size:1.5em;
+  }
+
+  label{
+    display:block;
+  }
+
+  .main{
+    width:100%;
+    left:0%;
   }
 
 

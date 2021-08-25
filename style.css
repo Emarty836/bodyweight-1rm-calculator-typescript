@@ -1,7 +1,7 @@
 
 
 .main{
-  background:white;
+  background:#848eb1;
   margin:auto;
   padding:0;
   width:80%;
@@ -17,6 +17,11 @@ body{
   margin:0;
   padding:0;
 }
+
+input:hover{
+  background:#6ca8fe;
+}
+
 
 button{
   margin:0;
@@ -66,6 +71,7 @@ margin:20px 0 5px 0;}
 .styled-table{
   margin:auto;
   border:solid black 3px;
+  background:rgba(7,91,164,1);
 }
 
 .styled-table td, th{
@@ -77,8 +83,12 @@ margin:20px 0 5px 0;}
   background:#7b848c;
 }
 
-.styled-table td{
+.styled-table tr{
   background:#c0c3c6;
+}
+
+.styled-table tr:hover{
+  background:#6ca8fe;
 }
 
 input{
@@ -126,7 +136,7 @@ font-size:100px;}
   #third{
     margin:0px 0px 20px 0px;
   }
-
+}
 
 
 }

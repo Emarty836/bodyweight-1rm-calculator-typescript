@@ -22,8 +22,8 @@ function calculate() {
   var added = parseInt(document.querySelector('#second').value);
   var reps = parseInt(document.querySelector('#third').value);
   var resulttext = document.querySelector('#new');
-
   var total = added + bodyweight;
+
   console.log(total);
   if (reps === 1) {
     var repmax = total;
@@ -194,7 +194,7 @@ function calculate() {
   }
 
   /*------------------------------------------------------------------------quote-----------------------------------------------------*/
-if (bodyweight === 0)
+if (bodyweight === 0 || !bodyweight)
 {resulttext.insertAdjacentText('afterend', 'Your 1RM for the non-bodyweight exercise is ' + repmax);}
 else{
   resulttext.insertAdjacentText('afterend', 'Your 1RM is ' + repmax + 'lbs or ' + addedweight + 'lbs added weight which is ' + ratio + '% of your bodyweight.');}

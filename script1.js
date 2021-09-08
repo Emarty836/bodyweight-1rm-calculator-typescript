@@ -24,6 +24,12 @@ function calculate() {
   var resulttext = document.querySelector('#new');
   var total = added + bodyweight;
 
+if(reps<1||reps>20){
+  resulttext.insertAdjacentText('afterend', 'Please enter a rep amount between 1-20.  Click on Reset!');
+  return button1.removeEventListener('click', calculate);
+}
+
+
   console.log(total);
   if (reps === 1) {
     var repmax = total;
@@ -95,102 +101,102 @@ function calculate() {
   var finalAdded = repmax - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep1').innerHTML = "--"; }
   else {
-    document.getElementById('#rep1').innerHTML = finalAdded;
+    document.getElementById('#rep1').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .97) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep2').innerHTML = "--"; }
   else {
-    document.getElementById('#rep2').innerHTML = finalAdded;
+    document.getElementById('#rep2').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .94) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep3').innerHTML = "--"; }
   else {
-    document.getElementById('#rep3').innerHTML = finalAdded;
+    document.getElementById('#rep3').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .92) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep4').innerHTML = "--"; }
   else {
-    document.getElementById('#rep4').innerHTML = finalAdded;
+    document.getElementById('#rep4').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .89) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep5').innerHTML = "--"; }
   else {
-    document.getElementById('#rep5').innerHTML = finalAdded;
+    document.getElementById('#rep5').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .86) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep6').innerHTML = "--"; }
   else {
-    document.getElementById('#rep6').innerHTML = finalAdded;
+    document.getElementById('#rep6').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .83) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep7').innerHTML = "--"; }
   else {
-    document.getElementById('#rep7').innerHTML = finalAdded;
+    document.getElementById('#rep7').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .81) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep8').innerHTML = "--"; }
   else {
-    document.getElementById('#rep8').innerHTML = finalAdded;
+    document.getElementById('#rep8').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .78) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep9').innerHTML = "--"; }
   else {
-    document.getElementById('#rep9').innerHTML = finalAdded;
+    document.getElementById('#rep9').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .75) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep10').innerHTML = "--"; }
   else {
-    document.getElementById('#rep10').innerHTML = finalAdded;
+    document.getElementById('#rep10').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .73) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep11').innerHTML = "--"; }
   else {
-    document.getElementById('#rep11').innerHTML = finalAdded;
+    document.getElementById('#rep11').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .71) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep12').innerHTML = "--"; }
   else {
-    document.getElementById('#rep12').innerHTML = finalAdded;
+    document.getElementById('#rep12').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .70) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep13').innerHTML = "--"; }
   else {
-    document.getElementById('#rep13').innerHTML = finalAdded;
+    document.getElementById('#rep13').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .68) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep14').innerHTML = "--"; }
   else {
-    document.getElementById('#rep14').innerHTML = finalAdded;
+    document.getElementById('#rep14').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .67) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep15').innerHTML = "--"; }
   else {
-    document.getElementById('#rep15').innerHTML = finalAdded;
+    document.getElementById('#rep15').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .65) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep16').innerHTML = "--"; }
   else {
-    document.getElementById('#rep16').innerHTML = finalAdded;
+    document.getElementById('#rep16').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .64) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep17').innerHTML = "--"; }
   else {
-    document.getElementById('#rep17').innerHTML = finalAdded;
+    document.getElementById('#rep17').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .63) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep18').innerHTML = "--"; }
   else {
-    document.getElementById('#rep18').innerHTML = finalAdded;
+    document.getElementById('#rep18').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .61) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep19').innerHTML = "--"; }
   else {
-    document.getElementById('#rep19').innerHTML = finalAdded;
+    document.getElementById('#rep19').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .60) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
   else {
-    document.getElementById('#rep20').innerHTML = finalAdded;
+    document.getElementById('#rep20').innerHTML = finalAdded.toFixed(2);
   }
 
   /*------------------------------------------------------------------------quote-----------------------------------------------------*/

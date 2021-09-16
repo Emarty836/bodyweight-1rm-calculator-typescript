@@ -19,7 +19,7 @@ function calculate() {
   console.log(document.querySelector('#first').value);
 
   var bodyweight = parseFloat(document.querySelector('#first').value);
-  var added = parseInt(document.querySelector('#second').value);
+  var added = parseFloat(document.querySelector('#second').value);
   var reps = parseInt(document.querySelector('#third').value);
   var resulttext = document.querySelector('#new');
   var total = added + bodyweight;
@@ -28,7 +28,8 @@ if(reps<1||reps>20){
   resulttext.insertAdjacentText('afterend', 'Please enter a rep amount between 1-20.  Click on Reset!');
   return button1.removeEventListener('click', calculate);
 }
-
+console.log(bodyweight);
+console.log(added);
 
   console.log(total);
   if (reps === 1) {
@@ -203,7 +204,7 @@ if(reps<1||reps>20){
 if (bodyweight === 0 || !bodyweight)
 {resulttext.insertAdjacentText('afterend', 'Your 1RM for the non-bodyweight exercise is ' + repmax);}
 else{
-  resulttext.insertAdjacentText('afterend', 'Your 1RM is ' + repmax + 'lbs or ' + addedweight + 'lbs added weight which is ' + ratio + '% of your bodyweight.');}
+  resulttext.insertAdjacentText('afterend', 'Your 1RM is ' + repmax.toFixed(1) + 'lbs or ' + addedweight.toFixed(1) + 'lbs added weight which is ' + ratio.toFixed(2) + '% of your bodyweight.');}
   button1.removeEventListener('click', calculate);
 }
 

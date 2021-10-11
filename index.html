@@ -3,537 +3,148 @@
 <head>
   <meta charset="utf-8" name="viewport" content="initial-scale=1">
   <title>
-    Dota 2.1 Roster
+    Bodyweight 1RM Calculator
   </title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-
 <body>
-<div id="title">
-<h1 id="project">DOTA 2 ROSTER</h1>
-<div id="purpose">
-  <div>
-  This is to see renamed heroes---------------------------><br>
-  <br><span id="lower">Pictures and/or Names are subject to change when turned ON
-  </span>
+<div class="main">
+  <h1 id="title">Bodyweight Exercise 1RM Calculator</h1>
+  <div id="info">
+  <form id="new">
+    <label for="first">Enter bodyweight(lb/kg):</label>
+    <input type="text" id="first" name="first" value="0"><br><span class="stuff">-&nbsp;leave first value as 0 if not a body-weight exercise.</span><br>
+    <label for="second">Enter loaded weight(lb/kg):</label>
+    <input type="text" id="second" name="second" value="0"><br>
+    <label for="third">Enter rep amount (1-20):</label>
+    <input type="text" id="third" name="third" value="1"><br>
+  <button type="button" class="butt" id='button1'>Calculate!</button><br>
+  <button type="button" id="reset" class="butt"  >Reset!</button>
+  <!--onclick="window.location.reload()"-->
+</form>
+  </div>
+<div id="part2">
+  <h2>1RM Calculations</h2>
+
+  <table class="styled-table">
+    <thead>
+      <tr>
+        <th>%1RM</th>
+        <th>Max Reps</th>
+        <th>Added Weight</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>100%</td>
+        <td>1</td>
+        <td id=#rep1></td>
+      </tr>
+      <tr>
+        <td>97%</td>
+        <td>2</td>
+        <td id=#rep2></td>
+      </tr>
+      <tr>
+        <td>94%</td>
+        <td>3</td>
+        <td id=#rep3></td>
+      </tr>
+      <tr>
+        <td>92%</td>
+        <td>4</td>
+        <td id=#rep4></td>
+      </tr>
+      <tr>
+        <td>89%</td>
+        <td>5</td>
+        <td id=#rep5></td>
+      </tr>
+      <tr>
+        <td>86%</td>
+        <td>6</td>
+        <td id=#rep6></td>
+      </tr>
+      <tr>
+        <td>83%</td>
+        <td>7</td>
+        <td id=#rep7></td>
+      </tr>
+      <tr>
+        <td>81%</td>
+        <td>8</td>
+        <td id=#rep8></td>
+      </tr>
+      <tr>
+        <td>78%</td>
+        <td>9</td>
+        <td id=#rep9></td>
+      </tr>
+      <tr>
+        <td>75%</td>
+        <td>10</td>
+        <td id=#rep10></td>
+      </tr>
+      <tr>
+        <td>73%</td>
+        <td>11</td>
+        <td id=#rep11></td>
+      </tr>
+      <tr>
+        <td>71%</td>
+        <td>12</td>
+        <td id=#rep12></td>
+      </tr>
+      <tr>
+        <td>70%</td>
+        <td>13</td>
+        <td id=#rep13></td>
+      </tr>
+      <tr>
+        <td>68%</td>
+        <td>14</td>
+        <td id=#rep14></td>
+      </tr>
+      <tr>
+        <td>67%</td>
+        <td>15</td>
+        <td id=#rep15></td>
+      </tr>
+      <tr>
+        <td>65%</td>
+        <td>16</td>
+        <td id=#rep16></td>
+      </tr>
+      <tr>
+        <td>64%</td>
+        <td>17</td>
+        <td id=#rep17></td>
+      </tr>
+      <tr>
+        <td>63%</td>
+        <td>18</td>
+        <td id=#rep18></td>
+      </tr>
+      <tr>
+        <td>61%</td>
+        <td>19</td>
+        <td id=#rep19></td>
+      </tr>
+      <tr>
+        <td>60%</td>
+        <td>20</td>
+        <td id=#rep20></td>
+      </tr>
+
+    </tbody>
+    </table>
+<br>
 </div>
-<div class="button">
-
-  <button class="switch" id="one">ON</button>
-  <button class="switch red" id="two">OFF</button>
+<p style="text-align:center">*The 1 Rep Max Percentages is from the website: <a href="https://strengthlevel.com/one-rep-max-calculator">https://strengthlevel.com/one-rep-max-calculator</a></p>
 
 </div>
-<---------------------This button is for safe/ original mode.
-</div>
-</div>
-<section class="heroes">
+<script src="script2.js">
 
-<!---strength------------------------------------------------------------------------------------------------------------->
-<div id=strength>
-  <div id="Abaddon" class="sheroes">
-    <img id="abaddon" src="image/strength/abaddon.jpeg">
-    <span id="abaddon_text">Abaddon</span>
-  </div>
-  <div id="Alchemist" class="sheroes">
-    <img id="alchemist" src="image/strength/alchemist.jpeg">
-    <span id="alchemist_text"> Alchemist</span>
-  </div>
-  <div id="Axe" class="sheroes">
-    <img id="axe" src="image/strength/axe.png">
-    <span id="axe_text">Axe</span>
-  </div>
-  <div id="Beastmaster" class="sheroes">
-    <img id="beastmaster" src="image/strength/Beastmaster.jpeg">
-    <span id="beastmaster_text">Beastmaster</span>
-  </div>
-  <div id="Brewmaster" class="sheroes">
-    <img id="brewmaster" src="image/strength/Brewmaster.png">
-    <span id="brewmaster_text">Brewmaster<span>
-  </div>
-  <div id="Bristleback" class="sheroes">
-    <img id="bristleback" src="image/strength/bristleback.png">
-    <span id="bristleback_text">Bristleback</span>
-  </div>
-  <div id="Centaur Warrunner" class="sheroes">
-    <img id="centaur" src="image/strength/Centaur_Warrunner_icon.png">
-    <span id="centaur_text"> Centaur Warrunner</span>
-  </div>
-  <div id="Chaos Knight" class="sheroes">
-    <img id="chaos" src="image/strength/chaosknight.png">
-    <span id="chaos_text">Chaos Knight</span>
-  </div>
-  <div id="Clockerk" class="sheroes">
-    <img id="clockwerk" src="image/strength/clockwerk.jpeg">
-    <span id="clockwerk_text">Clockerk</span>
-  </div>
-  <div id="Dawnbreaker" class="sheroes">
-    <img id="dawnbreaker" src="image/strength/dawnbreaker.png">
-    <span id="dawnbreaker_text">Dawnbreaker</span>
-  </div>
-  <div id="Doom" class="sheroes">
-    <img id="doom" src="image/strength/doom.png">
-    <span id="doom_text">Doom</span>
-  </div>
-  <div id="Dragon Knight" class="sheroes">
-    <img id="dragonknight" src="image/strength/dragonknight.png">
-    <span id="dragonknight_text">Dragon Knight</span>
-  </div>
-  <div id="Earth Spirit" class="sheroes">
-    <img id="earthspirit" src="image/strength/earthspirit.png">
-    <span id="earthspirit_text">Earth Spirit</span>
-  </div>
-  <div id="Earthshaker" class="sheroes">
-    <img id="earthshaker" src="image/strength/earthshaker.png">
-    <span id="earthshaker_text">Earthshaker</span>
-  </div>
-  <div id="Elder Titan" class="sheroes">
-    <img id="eldertitan" src="image/strength/eldertitan.png">
-    <span id="eldertitan_text">Elder Titan</span>
-  </div>
-  <div id="Huskar" class="sheroes">
-    <img id="huskar" src="image/strength/huskar.png">
-    <span id="huskar_text">Huskar</span>
-  </div>
-  <div id="Io" class="sheroes">
-    <img id="io" src="image/strength/io.png">
-    <span id="io_text">Io</span>
-  </div>
-  <div id="Kunkka" class="sheroes">
-    <img id="kunkka" src="image/strength/kunkka.png">
-    <span id="kunkka_text">Kunkka</span>
-  </div>
-  <div id="Legion Commander" class="sheroes">
-    <img id="legion" src="image/strength/Legion_Commander_icon.png">
-    <span id="legion_text">Legion Commander</span>
-  </div>
-  <div id="Lifestealer" class="sheroes">
-    <img id="lifestealer" src="image/strength/Lifestealer_icon.png">
-    <span id="lifestealer_text">Lifestealer</span>
-  </div>
-  <div id="Lycan" class="sheroes">
-    <img id="lycan" src="image/strength/Lycan_icon.png">
-    <span id="lycan_text">Lycan</span>
-  </div>
-  <div id="Magnus" class="sheroes">
-    <img id="magnus" src="image/strength/Magnus_icon.png">
-    <span id="magnus_text">Magnus</span>
-  </div>
-  <div id="Mars" class="sheroes">
-    <img id="mars" src="image/strength/Mars_icon.png">
-    <span id="mars_text">Mars</span>
-  </div>
-  <div id="Night Stalker" class="sheroes">
-    <img id="night_stalker" src="image/strength/Night_Stalker_icon.png">
-    <span id="nightstalker_text">Night Stalker</span>
-  </div>
-  <div id="Omniknight" class="sheroes">
-    <img id="onmiknight" src="image/strength/Omniknight_icon.png">
-    <span id="onmiknight_text">Omniknight</span>
-  </div>
-  <div id="Phoenix" class="sheroes">
-    <img id="phoenix" src="image/strength/benedict-barone-katoglou-phoenix-low.jpeg">
-    <span id="phoenix_text">Phoenix</span>
-  </div>
-  <div id="Pudge" class="sheroes">
-    <img id="pudge" src="image/strength/Pudge_icon.png">
-    <span id="pudge_text">Pudge</span>
-  </div>
-  <div id="Sand King" class="sheroes">
-    <img id="sand_king" src="image/strength/Sand_King_icon.png">
-    <span id="sandking_text">Sand King</span>
-  </div>
-  <div id="Slardar" class="sheroes">
-    <img id="slardar" src="image/strength/Slardar_icon.png">
-    <span id="slardar_text">Slardar</span>
-  </div>
-  <div id="Snapfire" class="sheroes">
-    <img id="snapfire" src="image/strength/Snapfire_icon.png">
-    <span id="snapfire_text">Snapfire</span>
-  </div>
-  <div id="Spirit Breaker" class="sheroes">
-    <img id="spirit_breaker" src="image/strength/Spirit_Breaker_icon.png">
-    <span id="spirit_breaker_text">Spirit Breaker</span>
-  </div>
-  <div id="Sven" class="sheroes">
-    <img id="sven" src="image/strength/Sven_icon.png">
-    <span id="sven_text">Sven</span>
-  </div>
-  <div id="Tidehunter" class="sheroes">
-    <img id="tidehunter" src="image/strength/Tidehunter_icon.png">
-    <span id="tidehunter_text">Tidehunter</span>
-  </div>
-  <div id="Timbersaw" class="sheroes">
-    <img id="timbersaw" src="image/strength/Timbersaw_icon.png">
-    <span id="timbersaw_text">Timbersaw</span>
-  </div>
-  <div id="Tiny" class="sheroes">
-    <img id="tiny" src="image/strength/Tiny_icon.png">
-    <span id="tiny_text">Tiny</span>
-  </div>
-  <div id="Treant Protector" class="sheroes">
-    <img id="treant_protector" src="image/strength/Treant_Protector_icon.png">
-    <span id="treant_text">Treant Protector</span>
-  </div>
-  <div id="Tusk" class="sheroes">
-    <img id="tusk" src="image/strength/Tusk_icon.png">
-    <span id="tusk_text">Tusk</span>
-  </div>
-  <div id="Underlord" class="sheroes">
-    <img id="underlord" src="image/strength/Underlord_icon.png">
-    <span id="underlord_text">Underlord</span>
-  </div>
-  <div id="Undying" class="sheroes">
-    <img id="undying" src="image/strength/Undying_icon.png">
-    <span id="undying_text">Undying</span>
-  </div>
-  <div id="Wraith King" class="sheroes">
-    <img id="wraithking" src="image/strength/Wraith_King_icon.png">
-    <span id="wraithking_text">Wraith King</span>
-  </div>
-</div>
-
-
-
-<!----------------------------------------Agility----------------------------->
-
-
-
-<div id="agility">
-  <div id="Anti_mage" class="aheroes">
-    <img id="antimage"src="image/agility/AntiMage_icon.png">
-    <span id="antimage_text"> Anti-Mage</span>
-  </div>
-  <div id="Arc_warden" class="aheroes">
-    <img id="arc_warden" src="image/agility/Arc_Warden_icon.png">
-    Arc Warden
-  </div>
-  <div id="Bloodseeker" class="aheroes">
-    <img id="bloodseeker" src="image/agility/Bloodseeker_icon.png">
-    Bloodseeker
-  </div>
-  <div id="Bounty_hunter" class="aheroes">
-    <img id="bounty_hunter" src="image/agility/Bounty_Hunter_icon.png">
-    Bounty Hunter
-  </div>
-  <div id="Broodmother" class="aheroes">
-    <img id="broodmother"src="image/agility/Broodmother_icon.png">
-    Broodmother
-  </div>
-  <div id="Clinkz" class="aheroes">
-    <img id="clinkz" src="image/agility/Clinkz_icon.png">
-    Clinkz
-  </div>
-  <div id="Drow_ranger" class="aheroes">
-    <img id="drow_ranger" src="image/agility/Drow_Ranger_icon.png">
-    Drow Ranger
-  </div>
-  <div id="Ember_Spirit" class="aheroes">
-    <img id="ember_spirit" src="image/agility/Ember_Spirit_icon.png">
-    Ember Spirit
-  </div>
-  <div id="Faceless Void" class="aheroes">
-    <img id="faceless_Void" src="image/agility/Faceless_Void_icon.png">
-    Faceless Void
-  </div>
-  <div id="gyrocopter" class="aheroes">
-    <img id="gyrocopter" src="image/agility/Gyrocopter_icon.png">
-    Gyrocopter
-  </div>
-  <div id="Hoodwink" class="aheroes">
-    <img id="hoodwink" src="image/agility/hoodwink.jpeg">
-    <span id="hoodwink_text">Hoodwink</span>
-  </div>
-  <div class="aheroes">
-    <img id="juggernaut" src="image/agility/Juggernaut_icon.png">
-    <span id="juggernaut_text">Juggernaut</span>
-  </div>
-  <div class="aheroes">
-    <img id="lone_druid" src="image/agility/Lone_Druid_icon.png">
-    Lone Druid
-  </div>
-  <div id="Luna" class="aheroes">
-    <img id="luna"src="image/agility/Luna_icon.png">
-    Luna
-  </div>
-  <div id="Medusa" class="aheroes">
-    <img id="medusa" src="image/agility/Medusa_icon.png">
-    Medusa
-  </div>
-  <div class="aheroes">
-    <img id="meepo" src="image/agility/Meepo_icon.png">
-    Meepo
-  </div>
-  <div id="Mirana" class="aheroes">
-    <img id="mirana" src="image/agility/Mirana_icon.png">
-    Mirana
-  </div>
-  <div id="monkey king" class="aheroes">
-    <img src="image/agility/monkey_king.jpeg">
-    <span id="monkeyking_text">Monkey King</span>
-  </div>
-  <div id="Morphling" class="aheroes">
-    <img id="morphling_text" src="image/agility/Morphling_icon.png">
-    Morphling
-  </div>
-  <div id="Naga_Siren" class="aheroes">
-    <img id="nagasiren" src="image/agility/Naga_Siren_icon.png">
-    Naga Siren
-  </div>
-  <div id="Nyx_Assassin" class="aheroes">
-    <img id="nyx_assassin"src="image/agility/Nyx_Assassin_icon.png">
-    Nyx Assassin
-  </div>
-  <div  class="aheroes">
-    <img id="pangolier" src="image/agility/Pangolier_icon.png">
-    Pangolier
-  </div>
-  <div class="aheroes">
-    <img id="phantom_assasssin" src="image/agility/Phantom_Assassin_icon.png">
-    Phantom Assassin
-  </div>
-  <div class="aheroes">
-    <img id="phantom_lancer" src="image/agility/Phantom_Lancer_icon.png">
-    Phantom Lancer
-  </div>
-  <div class="aheroes">
-    <img id="razor" src="image/agility/Razor_icon.png">
-    Razor
-  </div>
-  <div class="aheroes">
-    <img id="riki" src="image/agility/Riki_icon.png">
-      Riki
-  </div>
-  <div class="aheroes">
-    <img id="shadow_fiend" src="image/agility/Shadow_Fiend_icon.png">
-    Shadow Fiend
-  </div>
-  <div class="aheroes">
-    <img id="slark" src="image/agility/Slark_icon.png">
-    Slark
-  </div>
-  <div class="aheroes">
-    <img id="sniper" src="image/agility/Sniper_icon.png">
-    Sniper
-  </div>
-  <div class="aheroes">
-    <img id="spectre" src="image/agility/Spectre_icon.png">
-    Spectre
-  </div>
-  <div class="aheroes">
-    <img id="templar_assassin" src="image/agility/Templar_Assassin_icon.png">
-    Templar Assassin
-  </div>
-  <div class="aheroes">
-    <img id="terrorblade" src="image/agility/Terrorblade_icon.png">
-    Terrorblade
-  </div>
-  <div class="aheroes">
-    <img id="troll_warlord" src="image/agility/Troll_Warlord_icon.png">
-    Troll Warlord
-  </div>
-  <div class="aheroes">
-    <img id="ursa" src="image/agility/Ursa_icon.png">
-    Ursa
-  </div>
-  <div class="aheroes">
-    <img id="venegful_spirit" src="image/agility/Vengeful_Spirit_icon.png">
-    Vengeful Spirit
-  </div>
-  <div class="aheroes">
-    <img id="venomancer" src="image//agility/Venomancer_icon.png">
-    Venomancer
-  </div>
-  <div class="aheroes">
-    <img id="viper" src="image/agility/Viper_icon.png">
-    Viper
-  </div>
-  <div class="aheroes">
-    <img id="weaver" src="image/agility/weaver.png">
-    Weaver
-  </div>
-</div>
-
-
-<!--intelligence------------------------------------------------------------------------------------------------------>
-<div id="intelligence">
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Ancient_Apparition_icon.png">
-    Ancient Apparition
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Bane_icon.png">
-    Bane
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Batrider_icon.png">
-    Batrider
-  </div>
-  <div  class="iheroes">
-    <img src="image/intelligence/Chen_icon.png">
-    Chen
-  </div>
-  <div id="" class="iheroes">
-    <img id="crystal_maiden" src="image/intelligence/Crystal_Maiden_icon.png">
-    Crystal Maiden
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Dark_Seer_icon.png">
-    Dark Seer
-  </div>
-  <div id="" class="iheroes">
-    <img id="dark_willow" src="image/intelligence/Dark_Willow_icon.png">
-    Dark Willow
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Dazzle_icon.png">
-    Dazzle
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Death_Prophet_icon.png">
-    Death Prophet
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Disruptor_icon.png">
-    Disruptor
-  </div>
-  <div  class="iheroes">
-    <img id="enchantress" src="image/intelligence/Enchantress_icon.png">
-    Enchantress
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Enigma_icon.png">
-    <span id="enigma_text">Enigma</span>
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Grimstroke_icon.png">
-    Grimstroke
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Invoker_icon.png">
-    Invoker
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Jakiro_icon.png">
-    Jakiro
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Keeper_of_the_Light_icon.png">
-    <span id="kotl_text">Keeper of the Light</span>
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Leshrac_icon.png">
-    Leshrac
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Lich_icon.png">
-    Lich
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Lina_icon.png">
-    Lina
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Lion_icon.png">
-    Lion
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/natures.png">
-    Nature's Prophet
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Necrophos_icon.png">
-    Necrophos
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Ogre_Magi_icon.png">
-    <span id="ogremaji_text">Ogre Magi</span>
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Oracle_icon.png">
-    Oracle
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Outworld_Destroyer_icon.png">
-    Outworld Destroyer
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Puck_icon.png">
-    Puck
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Pugna_icon.png">
-    Pugna
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Queen_of_Pain_icon.png">
-    Queen of Pain
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Rubick_icon.png">
-    Rubick
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Shadow_Demon_icon.png">
-    Shadow Demon
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Shadow_Shaman_icon.png">
-    Shadow Shaman
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Silencer_icon.png">
-    Silencer
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Skywrath_Mage_icon.png">
-    Skywrath Mage
-  </div>
-  <div id="" class="iheroes">
-    <img id="stormspirit" src="image/intelligence/Storm_Spirit_icon.png">
-    Storm Spirit
-  </div>
-  <div id="" class="iheroes">
-    <img id="techies" src="image/intelligence/Techies_icon.png">
-    Techies
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Tinker_icon.png">
-    Tinker
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Visage_icon.png">
-    Visage
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Void_Spirit_icon.png">
-    Void Spirit
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Warlock_icon.png">
-    Warlock
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Windranger_icon.png">
-    Windranger
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Winter_Wyvern_icon.png">
-    Winter Wyvern
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Witch_Doctor_icon.png">
-    Witch Doctor
-  </div>
-  <div id="" class="iheroes">
-    <img src="image/intelligence/Zeus_icon.png">
-    <span id="zeus_text">Zeus</span>
-  </div>
-</div>
-
-</section>
-
-<script src="script1.js">
 </script>
-
 </body>
 </html>

@@ -31,7 +31,7 @@ function main() {
 function resetButton(){
   console.log('reset');
   document.querySelector('#first').value = 0;
-  document.querySelector('#second').value = 0;
+  document.querySelector('#second').value = "";
   document.querySelector('#third').value = 1;
   button1.addEventListener('click', calculate,{once:true});
 }

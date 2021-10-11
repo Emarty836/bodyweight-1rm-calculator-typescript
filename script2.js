@@ -1,6 +1,22 @@
+const reset = document.querySelector('#reset');
+let input1 = document.querySelector('#first');
+let input2 = document.querySelector('#second');
+let input3 = document.querySelector('#third');
+const button1 = document.querySelector('#button1');
+
+
+function valueChange(e){
+  console.log('i changed');
+  button1.addEventListener('click', calculate,{once:true});
+}
+input1.addEventListener('change',valueChange);
+input2.addEventListener('change',valueChange);
+input3.addEventListener('change',valueChange);
+
+
 function main() {
-  const button1 = document.querySelector('#button1');
-  button1.addEventListener('click', calculate);
+  //const button1 = document.querySelector('#button1');
+  button1.addEventListener('click', calculate,{once:true});
 }
 
 /*function results(){
@@ -12,6 +28,14 @@ function main() {
     document.getElementById('#rep3').innerHTML = newadded;
 }*/
 
+function resetButton(){
+  console.log('reset');
+  document.querySelector('#first').value = 0;
+  document.querySelector('#second').value = 0;
+  document.querySelector('#third').value = 1;
+  button1.addEventListener('click', calculate,{once:true});
+}
+
 
 /*-------------------------------------------------depends on rep amount---------------------------------------*/
 function calculate() {
@@ -21,13 +45,44 @@ function calculate() {
   var bodyweight = parseFloat(document.querySelector('#first').value);
   var added = parseFloat(document.querySelector('#second').value);
   var reps = parseInt(document.querySelector('#third').value);
-  var resulttext = document.querySelector('#new');
+//  var resulttext = document.querySelector('#new');
   var total = added + bodyweight;
 
-if(reps<1||reps>20){
-  resulttext.insertAdjacentText('afterend', 'Please enter a rep amount between 1-20.  Click on Reset!');
-  return button1.removeEventListener('click', calculate);
+if(reps<1||reps>20||isNaN(reps)){
+  //resulttext.insertAdjacentText('afterend', 'Please enter a rep amount between 1-20.  Click on Reset!');
+  //return button1.removeEventListener('click', calculate);
+  var sample1 = document.createElement('p');
+    sample1.textContent = `Please enter a rep amount between 1-20.`;
+    reset.insertAdjacentElement('afterend', sample1);
+    reset.addEventListener('click', () => {sample1.remove();
+    console.log('hey');});
+    input1.addEventListener('change', ()=> {
+      button1.addEventListener('click', () => {
+        sample1.remove();
+      })
+    });
+    input2.addEventListener('change', ()=> {
+      button1.addEventListener('click', () => {
+        sample1.remove();
+      })
+    });
+    input3.addEventListener('change', ()=> {
+      button1.addEventListener('click', () => {
+        sample1.remove();
+      })
+    });
+
 }
+if(isNaN(added)){
+  console.log('blank');
+  total = bodyweight;
+}
+
+if(isNaN(bodyweight)){
+    console.log('moon');
+    var bodyweight = 0;
+}
+
 console.log(bodyweight);
 console.log(added);
 
@@ -202,12 +257,59 @@ console.log(added);
 
   /*------------------------------------------------------------------------quote-----------------------------------------------------*/
 if (bodyweight === 0 || !bodyweight)
-{resulttext.insertAdjacentText('afterend', 'Your 1RM for the non-bodyweight exercise is ' + repmax.toFixed(1) + ' lbs.');}
+{ var sample = document.createElement('p');
+  var repmaxFixed = repmax.toFixed(1);
+  sample.textContent = `Your 1RM for the non-bodyweight exercise is ${repmaxFixed} lbs.`;
+  reset.insertAdjacentElement('afterend', sample);
+  reset.addEventListener('click', () => {sample.remove();});
+  input1.addEventListener('change', ()=> {
+    button1.addEventListener('click', () => {
+      sample.remove();
+    })
+  });
+  input2.addEventListener('change', ()=> {
+    button1.addEventListener('click', () => {
+      sample.remove();
+    })
+  });
+  input3.addEventListener('change', ()=> {
+    button1.addEventListener('click', () => {
+      sample.remove();
+    })
+  });
+
+} ///end of if
+
 else{
-  resulttext.insertAdjacentText('afterend', 'Your 1RM is ' + repmax.toFixed(1) + 'lbs or ' + addedweight.toFixed(1) + 'lbs added weight which is ' + ratio.toFixed(2) + '% of your bodyweight.');}
-  button1.removeEventListener('click', calculate);
+  var result = document.createElement('p');
+  var repmaxFixed = repmax.toFixed(1);
+  var weightFixed = addedweight.toFixed(1);
+  var ratioFixed = ratio.toFixed(2);
+  result.textContent = `Your 1RM is ${repmaxFixed} lbs or ${weightFixed} lbs added weight which is ${ratioFixed} % of your bodyweight.`;
+  reset.insertAdjacentElement('afterend', result);
+  reset.addEventListener('click', () => {result.remove();});
+  input1.addEventListener('change', ()=> {
+    button1.addEventListener('click', () => {
+      result.remove();
+    })
+  });
+  input2.addEventListener('change', ()=> {
+    button1.addEventListener('click', () => {
+      result.remove();
+    })
+  });
+  input3.addEventListener('change', ()=> {
+    button1.addEventListener('click', () => {
+      result.remove();
+    })
+  });
+}  // end of else
+
+
 }
 
 window.addEventListener('load', function () {
   main();
 })
+
+reset.addEventListener('click',resetButton);

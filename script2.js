@@ -48,7 +48,7 @@ function calculate() {
 //  var resulttext = document.querySelector('#new');
   var total = added + bodyweight;
 
-if(reps<1||reps>20||isNaN(reps)){
+if(reps<1||reps>20||reps!==23||isNaN(reps)){
   //resulttext.insertAdjacentText('afterend', 'Please enter a rep amount between 1-20.  Click on Reset!');
   //return button1.removeEventListener('click', calculate);
   var sample1 = document.createElement('p');
@@ -146,6 +146,21 @@ console.log(added);
   }
   if (reps === 20) {
     var repmax = (total / .6);
+  }
+  if (reps === 23) {
+    var repmax = (total / .568);
+  }
+  if (reps === 26) {
+    var repmax = (total / .546);
+  }
+  if (reps === 31) {
+    var repmax = (total / .5);
+  }
+  if (reps === 33) {
+    var repmax = (total / .478);
+  }
+  if (reps === 36) {
+    var repmax = (total / .46);
   }
 
   var addedweight = repmax - bodyweight;
@@ -253,6 +268,31 @@ console.log(added);
   if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
   else {
     document.getElementById('#rep20').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .568) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep23').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep23').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .546) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep26').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep26').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .5) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep31').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep31').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .478) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep33').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep33').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .46) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep36').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep36').innerHTML = finalAdded.toFixed(2);
   }
 
   /*------------------------------------------------------------------------quote-----------------------------------------------------*/

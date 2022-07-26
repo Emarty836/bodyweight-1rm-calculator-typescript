@@ -1,20 +1,20 @@
+@font-face{
+  font-family: 'grooved';
+  src: url('fonts/Arsenal-Regular.ttf') format(truetype);
+
+}
+
 .main{
   background:#848eb1;
-  margin:auto;
-  padding:0;
   width:80%;
-  min-height:100%;
   position:absolute;
   left:10%;
-  text-align:center;
   outline:solid 2px black;
 }
 
 
 body{
   background:#0f3657;
-  margin:0;
-  padding:0;
 }
 
 
@@ -25,16 +25,12 @@ input:hover{
 
 
 button{
-  margin:0;
-  padding:5px 12px;
   font-weight:bold;
-  text-transform:uppercase;
   font-family:sans-serif;
   color:#c0c3c6;
   border: solid black 2px;
   font-size:15px;
   cursor:pointer;
-  border-radius:5px;
 }
 
 
@@ -64,8 +60,11 @@ color:rgba(91,2,18,1);
   color:white;
   margin:0px;
   padding:30px;
+  font-size:45px;
   text-transform:uppercase;
-  outline:solid 2px black;
+  /*outline:solid 2px black;*/
+
+  font-family: 'Bebas Neue', cursive;
 }
 
 #part2{
@@ -154,4 +153,4 @@ font-size:100px;}
 }
 
 
-}
+

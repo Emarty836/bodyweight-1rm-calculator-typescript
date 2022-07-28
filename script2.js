@@ -48,7 +48,7 @@ function calculate() {
 //  var resulttext = document.querySelector('#new');
   var total = added + bodyweight;
 
-if(reps<1||reps>20||reps!==23||isNaN(reps)){
+if(reps<1||reps>36||isNaN(reps)){
   //resulttext.insertAdjacentText('afterend', 'Please enter a rep amount between 1-20.  Click on Reset!');
   //return button1.removeEventListener('click', calculate);
   var sample1 = document.createElement('p');
@@ -147,17 +147,50 @@ console.log(added);
   if (reps === 20) {
     var repmax = (total / .6);
   }
+  if (reps === 21) {
+    var repmax = (total / .589);
+  }
+  if (reps === 22) {
+    var repmax = (total / .579);
+  }
   if (reps === 23) {
     var repmax = (total / .568);
+  }
+  if (reps === 24) {
+    var repmax = (total / .562);
+  }
+  if (reps === 25) {
+    var repmax = (total / .555);
   }
   if (reps === 26) {
     var repmax = (total / .546);
   }
+  if (reps === 27) {
+    var repmax = (total / .5376);
+  }
+  if (reps === 28) {
+    var repmax = (total / .528);
+  }
+  if (reps === 29) {
+    var repmax = (total / .5184);
+  }
+  if (reps === 30) {
+    var repmax = (total / .5092);
+  }
   if (reps === 31) {
     var repmax = (total / .5);
   }
+  if (reps === 32) {
+    var repmax = (total / .489);
+  }
   if (reps === 33) {
     var repmax = (total / .478);
+  }
+  if (reps === 34) {
+    var repmax = (total / .472);
+  }
+  if (reps === 35) {
+    var repmax = (total / .466);
   }
   if (reps === 36) {
     var repmax = (total / .46);
@@ -269,25 +302,80 @@ console.log(added);
   else {
     document.getElementById('#rep20').innerHTML = finalAdded.toFixed(2);
   }
+  var finalAdded = (repmax * .589) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep21').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep21').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .579) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep22').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep22').innerHTML = finalAdded.toFixed(2);
+  }
   var finalAdded = (repmax * .568) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep23').innerHTML = "--"; }
   else {
     document.getElementById('#rep23').innerHTML = finalAdded.toFixed(2);
   }
-  var finalAdded = (repmax * .546) - bodyweight;
+  var finalAdded = (repmax * .562) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep24').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .555) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep25').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .5468) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep26').innerHTML = "--"; }
   else {
     document.getElementById('#rep26').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .5376) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep27').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .528) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep28').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .5184) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep29').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .5092) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep30').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .5) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep31').innerHTML = "--"; }
   else {
     document.getElementById('#rep31').innerHTML = finalAdded.toFixed(2);
   }
+  var finalAdded = (repmax * .489) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep32').innerHTML = finalAdded.toFixed(2);
+  }
   var finalAdded = (repmax * .478) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep33').innerHTML = "--"; }
   else {
     document.getElementById('#rep33').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .472) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep34').innerHTML = finalAdded.toFixed(2);
+  }
+  var finalAdded = (repmax * .466) - bodyweight;
+  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  else {
+    document.getElementById('#rep35').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .46) - bodyweight;
   if (finalAdded < 0) { document.getElementById('#rep36').innerHTML = "--"; }

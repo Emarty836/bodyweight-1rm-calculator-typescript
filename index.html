@@ -8,26 +8,29 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body>
-<div class="main">
-  <h1 id="title">Bodyweight Exercise 1RM Calculator</h1>
-  <div id="info">
-  <form id="new">
-    <label for="first">Enter bodyweight(lb/kg):</label>
+<body class="m-0 p-0">
+<div class="main m-auto p-0 text-center min-100">
+  <h1 class="bg-secondary text-white p-5 m-0 text-uppercase display-6">Bodyweight Exercise 1RM Calculator</h1>
+  <div class="my-5 lh-lg">
+  <form>
+    <label class="p-1" for="first">Enter bodyweight(lb/kg):</label>
     <input type="text" id="first" name="first" value="0"><br><span class="stuff">-&nbsp;leave first value as 0 if not a body-weight exercise.</span><br>
-    <label for="second">Enter loaded weight(lb/kg):</label>
+    <label class="p-1" for="second">Enter loaded weight(lb/kg):</label>
     <input type="text" id="second" name="second"><br>
-    <label for="third">Enter rep amount (1-20):</label>
+    <label class="p-1" for="third">Enter rep amount (1-20):</label>
     <input type="text" id="third" name="third" value="1"><br>
-  <button type="button" class="butt" id='button1'>Calculate!</button><br>
-  <button type="button" id="reset" >Reset!</button>
+  <button type="button" id='button1' class="m-1 py-2 px-3 text-uppercase rounded-2">Calculate!</button><br>
+  <button type="button" id="reset" class="m-1 py-2 px-3 text-uppercase rounded-2">Reset!</button>
   <!--onclick="window.location.reload()"-->
 </form>
   </div>
 <div id="part2">
-  <h2>1RM Calculations</h2>
+  <h2 class="p-4">1RM Calculations</h2>
 
   <table class="styled-table">
     <thead>
@@ -139,27 +142,82 @@
         <td id=#rep20></td>
       </tr>
       <tr>
-        <td>56.8%</td>
+        <td>58.9% **</td>
+        <td>21</td>
+        <td id=#rep21></td>
+      </tr>
+      <tr>
+        <td>57.9% **</td>
+        <td>22</td>
+        <td id=#rep22></td>
+      </tr>
+      <tr>
+        <td>56.8% **</td>
         <td>23</td>
         <td id=#rep23></td>
       </tr>
       <tr>
-        <td>54.6%</td>
+        <td>56.2% **</td>
+        <td>24</td>
+        <td id=#rep24></td>
+      </tr>
+      <tr>
+        <td>55.5% **</td>
+        <td>25</td>
+        <td id=#rep25></td>
+      </tr>
+      <tr>
+        <td>54.68% **</td>
         <td>26</td>
         <td id=#rep26></td>
       </tr>
       <tr>
-        <td>50%</td>
+        <td>53.76% **</td>
+        <td>27</td>
+        <td id=#rep27></td>
+      </tr>
+      <tr>
+        <td>52.8% **</td>
+        <td>28</td>
+        <td id=#rep28></td>
+      </tr>
+      <tr>
+        <td>51.84% **</td>
+        <td>29</td>
+        <td id=#rep29></td>
+      </tr>
+      <tr>
+        <td>50.92% **</td>
+        <td>30</td>
+        <td id=#rep30></td>
+      </tr>
+      <tr>
+        <td>50% **</td>
         <td>31</td>
         <td id=#rep31></td>
       </tr>
       <tr>
-        <td>47.8%</td>
+        <td>48.9% **</td>
+        <td>32</td>
+        <td id=#rep32></td>
+      </tr>
+      <tr>
+        <td>47.8% **</td>
         <td>33</td>
         <td id=#rep33></td>
       </tr>
       <tr>
-        <td>46%</td>
+        <td>47.2% **</td>
+        <td>34</td>
+        <td id=#rep34></td>
+      </tr>
+      <tr>
+        <td>46.6% **</td>
+        <td>35</td>
+        <td id=#rep35></td>
+      </tr>
+      <tr>
+        <td>46% **</td>
         <td>36</td>
         <td id=#rep36></td>
       </tr>
@@ -169,10 +227,12 @@
 <br>
 </div>
 <p style="text-align:center">*The 1 Rep Max Percentages is from the website: <a href="https://strengthlevel.com/one-rep-max-calculator">https://strengthlevel.com/one-rep-max-calculator</a></p>
-<p>** Numbers after 20 were calculated from myself.</p>
+<p>** Reps 21-36 were personally calculated and tested.</p>
 </div>
 <script src="script2.js">
 
 </script>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </body>
 </html>

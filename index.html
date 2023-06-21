@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" name="viewport" content="initial-scale=1">
+  <meta charset="utf-8"/> 
+  <meta name="viewport" content="width=device-width, initial=1.0"/>
   <title>
-    Bodyweight 1RM Calculator
+    21+ Rep Max Calculator
   </title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,17 +16,36 @@
 </head>
 <body class="m-0 p-0">
 <div class="main m-auto p-0 text-center min-100">
-  <h1 class="bg-secondary text-white p-5 m-0 text-uppercase display-6">Bodyweight Exercise 1RM Calculator</h1>
+  <h1 class="bg-secondary text-white p-5 m-0 text-uppercase display-6">21 plus Rep Max Calculator</h1>
   <div class="my-5 lh-lg">
   <form>
+    
     <label class="p-1" for="first">Enter bodyweight(lb/kg):</label>
-    <input type="text" id="first" name="first" value="0"><br><span class="stuff">-&nbsp;leave first value as 0 if not a body-weight exercise.</span><br>
+      <div class="input-flex">
+      <button type='button' id="minus1" class="minus rounded-5">-</button>
+      <input type="text" id="first" name="first" value="0">
+      <button type='button' id='add1' class="add rounded-5">+</button>
+      </div>
+  <span class="stuff">-&nbsp;leave first value as 0 if not a body-weight exercise.</span><br>
+  
     <label class="p-1" for="second">Enter loaded weight(lb/kg):</label>
-    <input type="text" id="second" name="second"><br>
-    <label class="p-1" for="third">Enter rep amount (1-20):</label>
-    <input type="text" id="third" name="third" value="1"><br>
-  <button type="button" id='button1' class="m-1 py-2 px-3 text-uppercase rounded-2">Calculate!</button><br>
+      <div class="input-flex">
+      <button type='button' id="minus2" class="minus rounded-5">-</button>
+      <input type="text" id="second" name="second"><br>
+      <button type='button' id='add2' class="add rounded-5">+</button>
+      </div>
+    <label class="p-1" for="third">Enter rep amount (1-36):</label>
+      <div class="input-flex">
+      <button type='button' id="minus3" class="minus rounded-5">-</button>
+      <input type="text" id="third" name="third" value="1"><br>
+      <button type='button' id='add3' class="add rounded-5">+</button>
+      </div>
+  <button type="button" id='button1' class="m-1 mt-3 py-2 px-3 text-uppercase rounded-2">Calculate!</button><br>
   <button type="button" id="reset" class="m-1 py-2 px-3 text-uppercase rounded-2">Reset!</button>
+  
+  
+
+
   <!--onclick="window.location.reload()"-->
 </form>
   </div>
@@ -152,7 +172,7 @@
         <td id=#rep22></td>
       </tr>
       <tr>
-        <td>56.8% **</td>
+        <td>56.8% *</td>
         <td>23</td>
         <td id=#rep23></td>
       </tr>
@@ -167,7 +187,7 @@
         <td id=#rep25></td>
       </tr>
       <tr>
-        <td>54.68% **</td>
+        <td>54.68% *</td>
         <td>26</td>
         <td id=#rep26></td>
       </tr>
@@ -192,7 +212,7 @@
         <td id=#rep30></td>
       </tr>
       <tr>
-        <td>50% **</td>
+        <td>50% *</td>
         <td>31</td>
         <td id=#rep31></td>
       </tr>
@@ -202,7 +222,7 @@
         <td id=#rep32></td>
       </tr>
       <tr>
-        <td>47.8% **</td>
+        <td>47.8% *</td>
         <td>33</td>
         <td id=#rep33></td>
       </tr>
@@ -226,10 +246,11 @@
     </table>
 <br>
 </div>
-<p style="text-align:center">*The 1 Rep Max Percentages is from the website: <a href="https://strengthlevel.com/one-rep-max-calculator">https://strengthlevel.com/one-rep-max-calculator</a></p>
-<p>** Reps 21-36 were personally calculated and tested.</p>
+<p style="text-align:center">The 1 Rep Max Percentages is from the website: <a href="https://strengthlevel.com/one-rep-max-calculator">https://strengthlevel.com/one-rep-max-calculator</a></p>
+<p>* These reps are personally tested.</p>
+<p>** Estimated reps after testing. </p>
 </div>
-<script src="script2.js">
+<script src="index.js">
 
 </script>
 <!-- JavaScript Bundle with Popper -->

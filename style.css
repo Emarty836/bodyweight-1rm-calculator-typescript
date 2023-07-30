@@ -4,42 +4,6 @@
 
 }
 
-#inputBox{
-  border-bottom:black solid 2px;
-  background:#848eb1;
-}
-
-.sample{
-  position:absolute;
-  width:100%;
-  padding-top:48px;
-  padding-bottom:48px;
-  margin-top: 0px;
-}
-
-.sample2{
-    position: fixed;
-    top: 0px;
-    width: 80%;
-    padding: 15px;
-    background:#848eb1;
-}
-
-.tab{
-  width:150px;
-  height:50px;
-  position:fixed;
-  border:2px solid black;
-  box-shadow:1px 1px 5px 0px white;
-  border-top:none;
-  display:none;
-  top:0;
-  left:50%;
-  transform:translateX(-50%);
-  background: linear-gradient(to right, grey 10%, transparent 10%, transparent 90%, grey 90%), 
-  linear-gradient(to bottom,grey 14%, black 14%, black 28%, grey 28%, grey 42%, black 42%, black 56%, grey 56%, grey 70%, black 70%, black 84%, grey 84%);
-}
-
 .main{
   background:#848eb1;
   width:80%;
@@ -129,7 +93,6 @@ color:rgba(91,2,18,1);
   outline:solid 2px black;
   min-height:100%;
   padding:10px;
-  margin-top:528px;
 }
 
 #info{
@@ -183,9 +146,6 @@ other{color:green;
 font-size:100px;}
 
 @media screen and (max-width:700px){
-  .sample2{
-    width:100%;
-  }
 
   input{
     font-size:1.25em;

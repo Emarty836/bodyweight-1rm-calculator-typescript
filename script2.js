@@ -3,7 +3,79 @@ let input1 = document.querySelector('#first');
 let input2 = document.querySelector('#second');
 let input3 = document.querySelector('#third');
 const button1 = document.querySelector('#button1');
+var adding1 = document.querySelector('#add1');
+var adding2 = document.querySelector('#add2');
+var adding3 = document.querySelector('#add3');
+var minus1 = document.querySelector('#minus1');
+var minus2 = document.querySelector('#minus2');
+var minus3 = document.querySelector('#minus3');
+const sample = document.querySelector('#inputBox');
+const tab = document.querySelector('.tab');
 
+var activate = false;
+var scrollMark = window.scrollY;
+
+function scrollData(x){
+  var scrollMark = window.scrollY;
+  //var x = window.matchMedia('(max-width: 359px)');
+  console.log(activate);
+  //console.log(scrollMark);
+  
+  if (scrollMark < 225){
+    var activate = false;
+    sample.classList.add('sample');
+    sample.classList.remove('sample2');
+    tab.style.display = 'none';
+    tab.style.borderTop = "none";
+    tab.style.position = 'fixed';
+        tab.style.top = '0';
+    //window.removeEventListener('resize', checkMediaQuery);
+  }
+  else if (scrollMark > 674){
+    
+    tab.style.display = 'block';
+  
+  
+
+    tab.addEventListener('click', () => {
+      activate = !activate;
+      console.log(activate);
+      if (activate){
+        
+        console.log('OPEN')
+          sample.classList.remove('sample');
+          sample.classList.add('sample2');
+          tab.style.position = 'absolute';
+          tab.style.top = '100%';
+          tab.style.borderTop = "2px solid black";
+          
+          
+          //checkMediaQuery();
+      
+          /*if (x.matches){
+            tab.style.transform = 'translate(-50%,720%)';
+            tab.style.background = 'red';
+            console.log('below');
+          }
+          else{
+          tab.style.transform = 'translate(-50%,920%)';
+          console.log('above');
+          }
+          window.addEventListener('resize', checkMediaQuery);*/
+        }
+      else{
+        console.log('CLOSE')
+        sample.classList.add('sample');
+        sample.classList.remove('sample2');
+        tab.style.position = 'fixed';
+        tab.style.top = '0';
+        
+      }
+    });
+  }
+
+  
+}
 
 function valueChange(e){
   console.log('i changed');
@@ -13,6 +85,91 @@ input1.addEventListener('change',valueChange);
 input2.addEventListener('change',valueChange);
 input3.addEventListener('change',valueChange);
 
+
+///////////////////////////first one
+function MinusValue1(){
+  var number = parseFloat(document.querySelector('#first').value);
+  if(number>=1){
+  var number = number - 1;
+  }else{
+    var number = number;
+  }
+  document.querySelector('#first').value = number;
+  button1.addEventListener('click', calculate,{once:true});
+}
+
+
+function AddValue1(){
+  var number = parseFloat(document.querySelector('#first').value);
+  var number = number + 1;
+  document.querySelector('#first').value = number;
+  button1.addEventListener('click', calculate,{once:true});
+}
+
+adding1.addEventListener('click', AddValue1);
+minus1.addEventListener('click', MinusValue1);
+
+/////////////////////////// second one
+
+function MinusValue2(){
+  var number = parseFloat(document.querySelector('#second').value);
+  if (isNaN(number)){
+    console.log('empty1');
+    var number = 0;
+  }
+  else if(number>=1){
+    var number = number - 1;
+    }else{
+      var number = number;
+    }
+  document.querySelector('#second').value = number;
+  button1.addEventListener('click', calculate,{once:true});
+}
+
+
+function AddValue2(){
+  var number = parseFloat(document.querySelector('#second').value);
+  if (isNaN(number)){
+    console.log('empty');
+    var number = 1;
+  }else{
+  var number = number + 1;}
+  document.querySelector('#second').value = number;
+  button1.addEventListener('click', calculate,{once:true});
+}
+
+adding2.addEventListener('click', AddValue2);
+minus2.addEventListener('click', MinusValue2);
+
+/////////////////// third one
+
+function MinusValue3(){
+  var number = parseFloat(document.querySelector('#third').value);
+  if(number>=1){
+    var number = number - 1;
+    }else{
+      var number = number;
+    }
+  document.querySelector('#third').value = number;
+  button1.addEventListener('click', calculate,{once:true});
+}
+
+
+function AddValue3(){
+  var number = parseFloat(document.querySelector('#third').value);
+  if(number<36){
+  var number = number + 1;}
+  else{
+    number=number;
+  }
+  document.querySelector('#third').value = number;
+  button1.addEventListener('click', calculate,{once:true});
+}
+
+adding3.addEventListener('click', AddValue3);
+minus3.addEventListener('click', MinusValue3);
+
+//////////////////////////// end of increments
 
 function main() {
   //const button1 = document.querySelector('#button1');
@@ -52,7 +209,7 @@ if(reps<1||reps>36||isNaN(reps)){
   //resulttext.insertAdjacentText('afterend', 'Please enter a rep amount between 1-20.  Click on Reset!');
   //return button1.removeEventListener('click', calculate);
   var sample1 = document.createElement('p');
-    sample1.textContent = `Please enter a rep amount between 1-20.`;
+    sample1.textContent = `Please enter a rep amount between 1-36.`;
     reset.insertAdjacentElement('afterend', sample1);
     reset.addEventListener('click', () => {sample1.remove();
     console.log('hey');});
@@ -71,6 +228,36 @@ if(reps<1||reps>36||isNaN(reps)){
         sample1.remove();
       })
     });
+    adding1.addEventListener('click', ()=> {
+      button1.addEventListener('click', () => {
+        sample1.remove();
+      })
+    });
+    adding2.addEventListener('click', ()=> {
+      button1.addEventListener('click', () => {
+        sample1.remove();
+      })
+    });
+    adding3.addEventListener('click', ()=> {
+      button1.addEventListener('click', () => {
+        sample1.remove();
+      })
+    });
+    minus1.addEventListener('click', ()=> {
+     button1.addEventListener('click', () => {
+        sample1.remove();
+      })
+    });
+    minus2.addEventListener('click', ()=> {
+      button1.addEventListener('click', () => {
+         sample1.remove();
+       })
+     });
+     minus3.addEventListener('click', ()=> {
+      button1.addEventListener('click', () => {
+         sample1.remove();
+       })
+     }); 
 
 }
 if(isNaN(added)){
@@ -318,12 +505,12 @@ console.log(added);
     document.getElementById('#rep23').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .562) - bodyweight;
-  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  if (finalAdded < 0) { document.getElementById('#rep24').innerHTML = "--"; }
   else {
     document.getElementById('#rep24').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .555) - bodyweight;
-  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  if (finalAdded < 0) { document.getElementById('#rep25').innerHTML = "--"; }
   else {
     document.getElementById('#rep25').innerHTML = finalAdded.toFixed(2);
   }
@@ -333,22 +520,22 @@ console.log(added);
     document.getElementById('#rep26').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .5376) - bodyweight;
-  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  if (finalAdded < 0) { document.getElementById('#rep27').innerHTML = "--"; }
   else {
     document.getElementById('#rep27').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .528) - bodyweight;
-  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  if (finalAdded < 0) { document.getElementById('#rep28').innerHTML = "--"; }
   else {
     document.getElementById('#rep28').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .5184) - bodyweight;
-  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  if (finalAdded < 0) { document.getElementById('#rep29').innerHTML = "--"; }
   else {
     document.getElementById('#rep29').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .5092) - bodyweight;
-  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  if (finalAdded < 0) { document.getElementById('#rep30').innerHTML = "--"; }
   else {
     document.getElementById('#rep30').innerHTML = finalAdded.toFixed(2);
   }
@@ -358,7 +545,7 @@ console.log(added);
     document.getElementById('#rep31').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .489) - bodyweight;
-  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  if (finalAdded < 0) { document.getElementById('#rep32').innerHTML = "--"; }
   else {
     document.getElementById('#rep32').innerHTML = finalAdded.toFixed(2);
   }
@@ -368,12 +555,12 @@ console.log(added);
     document.getElementById('#rep33').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .472) - bodyweight;
-  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  if (finalAdded < 0) { document.getElementById('#rep34').innerHTML = "--"; }
   else {
     document.getElementById('#rep34').innerHTML = finalAdded.toFixed(2);
   }
   var finalAdded = (repmax * .466) - bodyweight;
-  if (finalAdded < 0) { document.getElementById('#rep20').innerHTML = "--"; }
+  if (finalAdded < 0) { document.getElementById('#rep35').innerHTML = "--"; }
   else {
     document.getElementById('#rep35').innerHTML = finalAdded.toFixed(2);
   }
@@ -405,6 +592,36 @@ if (bodyweight === 0 || !bodyweight)
       sample.remove();
     })
   });
+  adding1.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+      sample.remove();
+    })
+  });
+  adding2.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+      sample.remove();
+    })
+  });
+  adding3.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+      sample.remove();
+    })
+  });
+  minus1.addEventListener('click', ()=> {
+   button1.addEventListener('click', () => {
+      sample.remove();
+    })
+  });
+  minus2.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+       sample.remove();
+     })
+   });
+   minus3.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+       sample.remove();
+     })
+   }); 
 
 } ///end of if
 
@@ -431,11 +648,53 @@ else{
       result.remove();
     })
   });
+  adding1.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+      result.remove();
+    })
+  });
+  minus1.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+      result.remove();
+    })
+  });
+  adding2.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+      result.remove();
+    })
+  });
+  minus2.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+      result.remove();
+    })
+  });
+  adding3.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+      result.remove();
+    })
+  });
+  minus3.addEventListener('click', ()=> {
+    button1.addEventListener('click', () => {
+      result.remove();
+    })
+  });
 }  // end of else
-
-
 }
 
+function checkMediaQuery() {
+  // If the inner width of the window is greater then 768px
+  if (window.innerWidth < 359) {
+    // Then log this message to the console
+    console.log('Media Query Matched!')
+    tab.style.background = 'red';
+  } else {
+    tab.style.background = 'green';
+  }
+}
+
+
+
+window.addEventListener('scroll', scrollData);
 window.addEventListener('load', function () {
   main();
 })
